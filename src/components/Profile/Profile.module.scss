@@ -1,0 +1,13 @@
+.profile {
+    grid-area: p;
+    background-color: yellow;
+
+    &__img {
+        width: 700px;
+        height: 200px;
+    }
+
+    &__avatar-img {
+        width: 50px;
+    }
+  }

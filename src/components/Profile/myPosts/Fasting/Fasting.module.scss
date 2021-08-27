@@ -1,0 +1,25 @@
+.profile {
+    &__posts {
+        &__blocks {
+            &__item {
+                color: blue;
+                
+                &__img {
+                    width: 60px; 
+                    border-radius: 50%;
+                }
+
+                &__rating {
+
+                    &__like {
+                        font-size: 40px;
+                    }
+
+                    &__likesCount {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

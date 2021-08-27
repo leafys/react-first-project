@@ -1,0 +1,11 @@
+.nav {
+    grid-area: n;
+    background-color: blue;
+
+    &__item {
+        &__link {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

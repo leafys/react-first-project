@@ -1,15 +1,18 @@
-// import logo from './logo.svg';
-import './App.css';
-import Technologies from './technologies.js'
-import Header from './header.js';
+import "./scss/app.scss";
+// import Profile from "./components/Profile/Profile";
+import Header from "./components/Header/Header";
+import Nav from "./components/Navbar/Navbar";
+import Dialogs from "./components/Dialogs/Dialogs";
 
 const App = () => {
   return (
-    <div>
-      <Technologies />
+    <div className="app-wrapper">
       <Header />
+      <Nav />
+      <Dialogs />
+      {/* <Profile /> */}
     </div>
   );
-}
+};
 
 export default App;

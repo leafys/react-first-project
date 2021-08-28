@@ -1,6 +1,7 @@
 .nav {
     grid-area: n;
     background-color: blue;
+    padding: 20px;
 
     &__item {
         &__link {
@@ -8,4 +9,8 @@
             text-decoration: none;
         }
     }
+}
+
+.active {
+    color: rgb(39, 2, 2);
 }

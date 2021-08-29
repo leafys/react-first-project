@@ -3,7 +3,7 @@ import styles from "./Dialogs.module.scss";
 import Users from "./Users/Users";
 import MessagesD from "./MessagesD/MessagesD";
 
-const Dialogs = (props) => {
+const Dialogs = () => {
   let dialogsData = [
     { id: 1, name: "Сережа" },
     { id: 2, name: "Артем" },
@@ -23,11 +23,11 @@ const Dialogs = (props) => {
   ];
 
   let dialogsElements = dialogsData.map((dialog) => (
-    <Users id={dialog.id} name={dialog.name} />
+    <Users key={dialog.id} name={dialog.name} />
   ));
 
   let messagesElements = messagesData.map((message) => (
-    <MessagesD message={message.message} />
+    <MessagesD key={message.id} message={message.message} />
   ));
 
   // [

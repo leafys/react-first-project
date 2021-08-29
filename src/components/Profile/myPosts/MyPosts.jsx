@@ -9,7 +9,11 @@ const MyPosts = () => {
   ];
 
   let postElements = postData.map((post) => (
-    <Fasting likesCount={post.likesCount} message={post.message} />
+    <Fasting
+      key={post.id}
+      likesCount={post.likesCount}
+      message={post.message}
+    />
   ));
 
   return (
@@ -22,7 +26,6 @@ const MyPosts = () => {
               className={styles.profile__posts__newPosts__textArea__area}
               name="message"
               id="message"
-              T
               cols="30"
               rows="2"
             ></textarea>

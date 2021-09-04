@@ -4,14 +4,14 @@ import MyPosts from "./myPosts/MyPosts";
 import Profileinfo from "./Profileinfo/Profileinfo";
 import ProfileBg from "./ProfileBg/ProfileBg";
 
-const Profile = () => {
+const Profile = ({ state }) => {
   return (
     <div className={styles.profile}>
       <ProfileBg />
 
       <Profileinfo />
 
-      <MyPosts />
+      <MyPosts state={state} />
     </div>
   );
 };

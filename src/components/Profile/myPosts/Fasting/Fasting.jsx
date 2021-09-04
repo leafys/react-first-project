@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Fasting.module.scss";
 
-const Fasting = (props) => {
+const Fasting = ({ message, likesCount }) => {
   return (
     <div>
       <div className={styles.profile__posts__blocks__item}>
@@ -11,7 +11,7 @@ const Fasting = (props) => {
           alt="img"
         />
         <span className={styles.profile__posts__blocks__item__text}>
-          {props.message}
+          {message}
         </span>
         <div className={styles.profile__posts__blocks__item__rating}>
           <span className={styles.profile__posts__blocks__item__rating__like}>
@@ -21,7 +21,7 @@ const Fasting = (props) => {
                 styles.profile__posts__blocks__item__rating__likesCount
               }
             >
-              {props.likesCount}
+              {likesCount}
             </span>
           </span>
         </div>

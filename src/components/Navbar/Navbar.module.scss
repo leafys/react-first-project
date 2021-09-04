@@ -3,14 +3,16 @@
     background-color: blue;
     padding: 20px;
 
-    &__item {
-        &__link {
-            color: #fff;
-            text-decoration: none;
+    &__friends {
+        display: flex;
+        padding: 0 30px 0 0;
+
+        &__title {
+            font-size: 30px;
+        }
+
+        &:last-child {
+            padding-right: 0;
         }
     }
-}
-
-.active {
-    color: rgb(39, 2, 2);
 }

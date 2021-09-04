@@ -1,54 +1,29 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Friends from "./Friends/Friends";
 import styles from "./Navbar.module.scss";
+import NavbarLink from "./NavbarLink/NavbarLink";
 
-const Nav = () => {
+const Nav = ({ state }) => {
+  let navElements = state.navData.map((info) => (
+    <NavbarLink
+      id={info.id}
+      key={info.id}
+      name={info.name}
+      linking={info.linking}
+    />
+  ));
+
+  let friendsElements = state.friendsData.map((el) => (
+    <Friends id={el.id} key={el.id} image={el.image} name={el.name} />
+  ));
+
   return (
     <nav className={styles.nav}>
-      <div className={"nav__item"}>
-        <NavLink
-          to="/profile"
-          activeClassName={styles.active}
-          className={styles.nav__item__link}
-        >
-          Profile
-        </NavLink>
-      </div>
-      <div className="nav__item">
-        <NavLink
-          to="/dialogs"
-          activeClassName={styles.active}
-          className={styles.nav__item__link}
-        >
-          Massages
-        </NavLink>
-      </div>
-      <div className="nav__item">
-        <NavLink
-          to="/news"
-          activeClassName={styles.active}
-          className={styles.nav__item__link}
-        >
-          News
-        </NavLink>
-      </div>
-      <div className="nav__item">
-        <NavLink
-          to="/music"
-          activeClassName={styles.active}
-          className={styles.nav__item__link}
-        >
-          Music
-        </NavLink>
-      </div>
-      <div className="nav__item">
-        <NavLink
-          to="/setings"
-          activeClassName={styles.active}
-          className={styles.nav__item__link}
-        >
-          Setings
-        </NavLink>
+      <div>{navElements}</div>
+
+      <div>
+        <h2 className={styles.nav__friends__title}>Friends</h2>
+        <div className={styles.nav__friends}>{friendsElements}</div>
       </div>
     </nav>
   );

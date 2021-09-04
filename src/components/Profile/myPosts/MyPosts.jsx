@@ -2,13 +2,8 @@ import React from "react";
 import Fasting from "./Fasting/Fasting";
 import styles from "./MyPosts.module.scss";
 
-const MyPosts = () => {
-  let postData = [
-    { id: 1, message: "Привет привет!!!", likesCount: 12 },
-    { id: 2, message: "Hello man!", likesCount: 13 },
-  ];
-
-  let postElements = postData.map((post) => (
+const MyPosts = ({ state }) => {
+  let postElements = state.postData.map((post) => (
     <Fasting
       key={post.id}
       likesCount={post.likesCount}
@@ -36,18 +31,7 @@ const MyPosts = () => {
             </button>
           </div>
         </div>
-        <div className={styles.profile__posts__blocks}>
-          {postElements}
-
-          {/* <Fasting
-            likesCount={postData[0].likesCount}
-            message={postData[0].message}
-          />
-          <Fasting
-            likesCount={postData[1].likesCount}
-            message={postData[1].message}
-          /> */}
-        </div>
+        <div className={styles.profile__posts__blocks}>{postElements}</div>
       </div>
     </div>
   );

@@ -2,11 +2,10 @@
     display: grid;
     grid-template-columns: 2fr 10fr;  
 
-    &__items {
-        padding: 10px;
-    }
-
-    &__messages {
-        padding: 10px;
+    &__messages { 
+        display: grid;
+        align-content: space-between;
+        justify-content: center;
+        padding: 20px 0 20px 0;
     }
 }

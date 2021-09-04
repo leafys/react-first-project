@@ -1,0 +1,13 @@
+.nav {
+    &__item {
+        &__link {
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+.active {
+    color: rgb(39, 2, 2);
+}

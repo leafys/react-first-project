@@ -5,6 +5,14 @@
         &__blocks {
             margin-top: 10px;
         }
+
+        &__newPosts {
+            &__textArea {
+                &__area {
+                    resize: none;
+                }
+            }
+        }
     }
 }
 

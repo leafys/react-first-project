@@ -1,0 +1,16 @@
+.dialogs {
+    &__messages {
+        padding: 10px;
+
+        &__message {
+            display: flex;
+            align-items: center;
+
+            &__img {
+                width: 20px;
+                // background-color: #000;
+                // border-radius: 50%;
+            }
+        }
+    }
+}

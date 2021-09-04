@@ -8,15 +8,21 @@ import Note from "./components/Note/Note";
 import News from "./components/News/News";
 import Setings from "./components/Setings/Setings";
 
-const App = () => {
+const App = ({ state }) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Nav />
+        <Nav state={state.navbarInfo} />
         <div className="app-wrapper-content">
-          <Route path="/profile" component={Profile} />
-          <Route path="/dialogs" component={Dialogs} />
+          <Route
+            path="/profile"
+            render={() => <Profile state={state.profilePage} />}
+          />
+          <Route
+            path="/dialogs"
+            render={() => <Dialogs state={state.dialogsPage} />}
+          />
           <Route path="/news" component={News} />
           <Route path="/music" component={Note} />
           <Route path="/setings" component={Setings} />

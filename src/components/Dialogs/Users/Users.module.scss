@@ -1,9 +1,23 @@
 .dialogs {
     &__items {
+        padding: 10px;
+        
         &__item {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            &:first-child {
+                padding-top: 0;
+            }
+
             &__link {
                 color: #000;
                 text-decoration: none;
+                padding-left: 10px
+            }
+
+            &__img {
+                width: 60px;
             }
         }
     }

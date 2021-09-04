@@ -1,9 +1,16 @@
 import React from "react";
 import styles from "./MessagesD.module.scss";
 
-const MessagesD = (props) => {
+const MessagesD = ({ message, image }) => {
   return (
-    <div className={styles.dialogs__messages__message}>{props.message}</div>
+    <div className={styles.dialogs__messages__message}>
+      <img
+        className={styles.dialogs__messages__message__img}
+        src={image}
+        alt="imageMsg"
+      />
+      {message}
+    </div>
   );
 };
 

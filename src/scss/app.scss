@@ -24,6 +24,7 @@
   }
 
   .app-wrapper-content {
+    display: grid;
     grid-area: p;
     background-color: yellow;
   }
